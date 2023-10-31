@@ -16,9 +16,20 @@
         <img src="images/dice.svg" alt="single face dice">
 
         <!-- embedding svg code into HTML -->
-        <svg  width="200" height="200" viewBox="0 0 200 200">
+        <svg  width="200" height="200" viewBox="0 0 200 200" class="dice4">
             <rect x="0" y="0" width="200" height="200" rx="8" ry="8" fill="#4dd0e1"/>
+            <circle cx="50" cy="50" r="25" fill="#d50000"/>
+            <circle cx="150" cy="150" r="25" fill="#d50000"/>
          </svg>
+         <!-- Reusing graphics with use tag -->
+         <svg  width="200" height="200" viewBox="0 0 200 200">
+            <rect x="0" y="0" width="200" height="200" rx="8" ry="8" fill="#4dd0e1"/>
+            <circle cx="50" cy="50" r="25" fill="#d50000" id="dot"/>
+            <use xlink:href="#dot" x="100"></use>
+            <use xlink:href="#dot" y="100"></use>
+            <use xlink:href="#dot" y="100" x="100"></use>
+            </svg>
+
     </div>
     
 </body>
